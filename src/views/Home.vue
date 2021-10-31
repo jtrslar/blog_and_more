@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <h1>ZZW的专属服务器</h1>
+    <h1>ZZW的专属服务器hahahahceshi</h1>
   </div>
 </template>
 
