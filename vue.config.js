@@ -2,7 +2,7 @@ module.exports = {
   pages: {
     index: {
       entry: "src/main.js",
-      title: "MyWorld",
+      title: "this is a title",
     },
   },
 };
