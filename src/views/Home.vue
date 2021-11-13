@@ -1,7 +1,5 @@
 <template>
-  <div class="home">
-    <h1>ZZW的专属服务器hahahahceshi</h1>
-  </div>
+  <div class="home"></div>
 </template>
 
 <script>

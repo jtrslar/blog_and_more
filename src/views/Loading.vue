@@ -1,19 +1,17 @@
 <template>
+  <!-- 一些没用的小特效 -->
   <div class="loading_main">
-    <div class="loading_list">
-      <div class="loading_item" name="asd" id=""></div>
-      <div class="loading_item"></div>
-      <div class="loading_item"></div>
-      <div class="loading_item"></div>
-      <div class="loading_item"></div>
-      <div class="loading_item"></div>
-    </div>
-    <div class="center"></div>
+    <Block />
   </div>
 </template>
 
 <script>
+import Block from '@/components/loading/Block'
+
 export default {
+  components: {
+    Block,
+  },
   data() {
     return {}
   },
