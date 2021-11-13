@@ -1,7 +1,7 @@
 <template>
   <div class="loading_main">
     <div class="loading_list">
-      <div class="loading_item"></div>
+      <div class="loading_item" name="asd" id=""></div>
       <div class="loading_item"></div>
       <div class="loading_item"></div>
       <div class="loading_item"></div>
@@ -15,11 +15,11 @@
 <script>
 export default {
   data() {
-    return {};
+    return {}
   },
   mounted() {},
   methods: {},
-};
+}
 </script>
 
 <style lang="less" scoped>
