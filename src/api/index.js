@@ -1,7 +1,7 @@
 import request from '@/utils/request'
 
 const getMdFile = (params) => {
-  return request.get(`/file/md/${params.url}`)
+  return request.post(`/file/md`, params)
 }
 
 export default {

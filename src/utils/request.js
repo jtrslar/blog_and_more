@@ -1,11 +1,22 @@
 import axios from 'axios'
 
+const dispose = (res) => {
+  res = res || {}
+  if (res.status === 200) {
+    return res.data
+  } else {
+    // 调用全局错误处理函数
+  }
+}
+
 const request = {
   get: async (url) => {
-    return await axios.get(url)
+    const response = await axios.get(url)
+    return dispose(response)
   },
   post: async (url, params) => {
-    return await axios.post(url, params)
+    const response = await axios.post(url, params)
+    return dispose(response)
   },
 }
 
