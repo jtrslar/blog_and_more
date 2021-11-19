@@ -1,9 +1,14 @@
 import request from '@/utils/request'
 
-const getMdFile = (params) => {
-  return request.post(`/file/md`, params)
+const getMdFileList = (params) => {
+  return request.post(`/api/blogList`, params)
+}
+
+const getBlogContent = (params) => {
+  return request.post(`/api/blogContent`, params)
 }
 
 export default {
-  getMdFile,
+  getMdFileList,
+  getBlogContent,
 }
