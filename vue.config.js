@@ -8,12 +8,12 @@ module.exports = {
 
   devServer: {
     proxy: {
-      '/file': {
-        target: 'http://121.5.23.189:8010',
+      '/api': {
+        target: 'http://121.5.23.189',
         secure: false,
         changeOrigin: true,
         pathRewrite: {
-          '^/file': '/file',
+          '^/api': '/api',
         },
       },
     },

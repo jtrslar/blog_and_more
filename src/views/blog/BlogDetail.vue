@@ -1,7 +1,7 @@
 <template>
   <!-- 可能会改成组件 -->
   <div class="main">
-    <div ref="blogDetail" class="blog_detail"></div>
+    <div ref="blogDetail" class="blog_detail marked dark"></div>
   </div>
 </template>
 
@@ -11,20 +11,22 @@ import API from '@/api/index'
 
 export default {
   data() {
-    return {}
+    return {
+      blogId: null,
+    }
   },
   mounted() {
-    this.getBLogDetail()
+    const { params } = this.$route
+    this.getBlogContent(params.id)
   },
   methods: {
-    async getBLogDetail() {
-      const parmas = { pageSize: 10, pageNum: 1 }
-      const blogContent = (await API.getMdFile(parmas)) || ''
-
+    async getBlogContent(blogId) {
+      const parmas = { blogId }
+      const { file } = (await API.getBlogContent(parmas)) || {}
       const blogDom = this.$refs.blogDetail
-      // const content = marked(blogContent)
-      console.log('content is ===>>> ', blogContent)
-      blogDom.innerHTML = blogContent
+      blogDom.innerHTML = marked(file)
+
+      this.blogId = blogId
     },
   },
 }
@@ -39,6 +41,11 @@ export default {
   font-size: 26px;
 
   .blog_detail {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+
+    padding: 2% 15%;
     width: 100%;
     height: 100%;
   }

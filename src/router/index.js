@@ -3,14 +3,15 @@ import VueRouter from 'vue-router'
 import Home from '@/views/Home.vue'
 import Loading from '@/views/Loading.vue'
 import BlogDetail from '@/views/blog/BlogDetail.vue'
+import BlogList from '@/views/blog/BlogList.vue'
 
 Vue.use(VueRouter)
 
 const routes = [
   {
     path: '/',
-    name: 'BlogDetail',
-    component: BlogDetail,
+    name: 'BlogList',
+    component: BlogList,
   },
   {
     path: '/home',
