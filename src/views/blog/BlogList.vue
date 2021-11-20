@@ -10,7 +10,7 @@
         :key="item.id"
         @click="handleReadBlog(item)"
       >
-        <span class="blog_name">{{ item.name }}</span>
+        <span class="blog_name">{{ item.title }}</span>
         <span class="blog_time">2021.11.19</span>
       </div>
     </div>
