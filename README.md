@@ -26,8 +26,4 @@ npm run build
 
 ## 传送门
 
-<<<<<<< HEAD
-- [服务端](https://github.com/jtrslar/blog_and_more)
-=======
 - [服务端](https://github.com/jtrslar/blog_server)
->>>>>>> feat_1125_3
