@@ -1,6 +1,15 @@
-# 预设项目
+# 大概算个博客吧
 
-- 此项目为预设模板
+    用来写博客和放一些有趣的东西的项目
+
+---
+
+## 技术栈
+
+- vue2.6
+- marked
+
+---
 
 ## 相关指令
 
@@ -12,3 +21,9 @@ npm run serve
 # 打包项目
 npm run build
 ```
+
+---
+
+## 传送门
+
+- [服务端](https://github.com/jtrslar/blog_and_more)
