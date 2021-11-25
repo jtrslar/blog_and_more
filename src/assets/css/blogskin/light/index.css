@@ -19,39 +19,45 @@ html {
   /* 抗锯齿 */
   -webkit-font-smoothing: antialiased;
 }
-.dark {
-  background: #363b40;
-  animation: bgColorToNight 0.4s ease;
+* {
+  transition: all 0.3s ease;
 }
-.dark button,
-.dark input,
-.dark select,
-.dark textarea,
-.dark div.code-tooltip-content {
-  color: #b8bfc6;
+.light {
+  background: #fff;
+  animation: bgColorToLight 0.4s ease;
+}
+.light div {
+  color: #fff;
+}
+.light button,
+.light input,
+.light select,
+.light textarea,
+.light div.code-tooltip-content {
+  color: #484b4e;
   border-color: transparent;
 }
-.dark div.code-tooltip,
-.dark .md-hover-tip .md-arrow:after {
-  background: #333;
+.light div.code-tooltip,
+.light .md-hover-tip .md-arrow:after {
+  background: #d6d6d6;
 }
-.dark .native-window #md-notification {
-  border: 1px solid #70717d;
+.light .native-window #md-notification {
+  border: 1px solid #b6b8cc;
 }
-.dark .popover.bottom > .arrow:after {
-  border-bottom-color: #333;
+.light .popover.bottom > .arrow:after {
+  border-bottom-color: #d8d8d8;
 }
-.dark hr {
+.light hr {
   height: 2px;
   border: 0;
   margin: 24px 0 !important;
 }
-.dark h1,
-.dark h2,
-.dark h3,
-.dark h4,
-.dark h5,
-.dark h6 {
+.light h1,
+.light h2,
+.light h3,
+.light h4,
+.light h5,
+.light h6 {
   font-family: 'Lucida Grande', 'Corbel', sans-serif;
   font-weight: normal;
   clear: both;
@@ -59,9 +65,9 @@ html {
   word-wrap: break-word;
   margin: 0;
   padding: 0;
-  color: #dedede;
+  color: #2c2c2c;
 }
-.dark h1 {
+.light h1 {
   font-size: 2.5rem;
   /* 36px */
   line-height: 2.75rem;
@@ -70,7 +76,7 @@ html {
   /* 24px */
   letter-spacing: -1.5px;
 }
-.dark h2 {
+.light h2 {
   font-size: 1.63rem;
   /* 24px */
   line-height: 1.875rem;
@@ -80,7 +86,7 @@ html {
   letter-spacing: -1px;
   font-weight: bold;
 }
-.dark h3 {
+.light h3 {
   font-size: 1.17rem;
   /* 18px */
   line-height: 1.5rem;
@@ -90,7 +96,7 @@ html {
   letter-spacing: -1px;
   font-weight: bold;
 }
-.dark h4 {
+.light h4 {
   font-size: 1.12rem;
   /* 16px */
   line-height: 1.375rem;
@@ -99,7 +105,7 @@ html {
   /* 24px */
   color: white;
 }
-.dark h5 {
+.light h5 {
   font-size: 0.97rem;
   /* 16px */
   line-height: 1.25rem;
@@ -108,7 +114,7 @@ html {
   /* 24px */
   font-weight: bold;
 }
-.dark h6 {
+.light h6 {
   font-size: 0.93rem;
   /* 16px */
   line-height: 1rem;
@@ -117,10 +123,10 @@ html {
   color: white;
 }
 @media (min-width: 980px) {
-  .dark h3.md-focus:before,
-  .dark h4.md-focus:before,
-  .dark h5.md-focus:before,
-  .dark h6.md-focus:before {
+  .light h3.md-focus:before,
+  .light h4.md-focus:before,
+  .light h5.md-focus:before,
+  .light h6.md-focus:before {
     color: #ddd;
     border: 1px solid #ddd;
     border-radius: 3px;
@@ -135,122 +141,121 @@ html {
     font-weight: normal;
     line-height: normal;
   }
-  .dark h3.md-focus:before {
+  .light h3.md-focus:before {
     content: 'h3';
   }
-  .dark h4.md-focus:before {
+  .light h4.md-focus:before {
     content: 'h4';
   }
-  .dark h5.md-focus:before {
+  .light h5.md-focus:before {
     content: 'h5';
     top: 0px;
   }
-  .dark h6.md-focus:before {
+  .light h6.md-focus:before {
     content: 'h6';
     top: 0px;
   }
 }
-.dark a {
+.light a {
   text-decoration: none;
   outline: 0;
 }
-.dark a:hover {
+.light a:hover {
   outline: 0;
 }
-.dark a:focus {
+.light a:focus {
   outline: thin dotted;
 }
-.dark sup.md-footnote {
+.light sup.md-footnote {
   background-color: #555;
   color: #ddd;
 }
-.dark p {
+.light p {
   -ms-word-wrap: break-word;
   word-wrap: break-word;
 }
-.dark p,
-.dark ul,
-.dark dd,
-.dark ol,
-.dark hr,
-.dark address,
-.dark pre,
-.dark table,
-.dark iframe,
-.dark .wp-caption,
-.dark .wp-audio-shortcode,
-.dark .wp-video-shortcode {
+.light p,
+.light ul,
+.light dd,
+.light ol,
+.light hr,
+.light address,
+.light pre,
+.light table,
+.light iframe,
+.light .wp-caption,
+.light .wp-audio-shortcode,
+.light .wp-video-shortcode {
   margin-top: 0;
   margin-bottom: 1.5rem;
-  color: #dedede;
+  color: #3d3d3d;
 }
-.dark audio:not([controls]) {
+.light audio:not([controls]) {
   display: none;
 }
-.dark [hidden] {
+.light [hidden] {
   display: none;
 }
-.dark ::-moz-selection {
+.light ::-moz-selection {
   background: #4a89dc;
   color: #fff;
   text-shadow: none;
 }
-.dark *.in-text-selection,
-.dark ::selection {
+.light *.in-text-selection,
+.light ::selection {
   background: #4a89dc;
   color: #fff;
   text-shadow: none;
 }
-.dark ul,
-.dark ol {
+.light ul,
+.light ol {
   padding: 0 0 0 1.875rem;
-  /* 30px */
 }
-.dark ul {
+.light ul {
   list-style: square;
 }
-.dark ol {
+.light ol {
   list-style: decimal;
 }
-.dark ul ul,
-.dark ol ol,
-.dark ul ol,
-.dark ol ul {
+.light ul ul,
+.light ol ol,
+.light ul ol,
+.light ol ul {
   margin: 0;
 }
-.dark b,
-.dark th,
-.dark dt,
-.dark strong {
+.light b,
+.light th,
+.light dt,
+.light strong {
   font-weight: bold;
 }
-.dark i,
-.dark em,
-.dark dfn,
-.dark cite {
+.light i,
+.light em,
+.light dfn,
+.light cite {
   font-style: italic;
 }
-.dark blockquote {
+.light blockquote {
   padding-left: 1.875rem;
   margin: 0 0 1.875rem 1.875rem;
   border-left: solid 2px #474d54;
   padding-left: 30px;
   margin-top: 35px;
 }
-.dark pre,
-.dark code,
-.dark kbd,
-.dark tt,
-.dark var {
+.light pre,
+.light code,
+.light kbd,
+.light tt,
+.light var {
   font-size: 0.875em;
   font-family: Monaco, Consolas, 'Andale Mono', 'DejaVu Sans Mono', monospace;
 }
-.dark code,
-.dark tt,
-.dark var {
+.light code,
+.light tt,
+.light var {
   background: rgba(0, 0, 0, 0.05);
 }
-.dark kbd {
+.light kbd {
   padding: 2px 4px;
   font-size: 90%;
   color: #fff;
@@ -258,87 +263,87 @@ html {
   border-radius: 3px;
   box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.25);
 }
-.dark pre.md-fences {
+.light pre.md-fences {
   padding: 10px 10px 10px 30px;
   margin-bottom: 20px;
   background: #333;
 }
-.dark .CodeMirror-gutters {
+.light .CodeMirror-gutters {
   background: #333;
   border-right: 1px solid transparent;
 }
-.dark .enable-diagrams pre.md-fences[lang='sequence'] .code-tooltip,
-.dark .enable-diagrams pre.md-fences[lang='flow'] .code-tooltip,
-.dark .enable-diagrams pre.md-fences[lang='mermaid'] .code-tooltip {
+.light .enable-diagrams pre.md-fences[lang='sequence'] .code-tooltip,
+.light .enable-diagrams pre.md-fences[lang='flow'] .code-tooltip,
+.light .enable-diagrams pre.md-fences[lang='mermaid'] .code-tooltip {
   bottom: -2.2em;
   right: 4px;
 }
-.dark code,
-.dark kbd,
-.dark tt,
-.dark var {
+.light code,
+.light kbd,
+.light tt,
+.light var {
   padding: 2px 5px;
 }
-.dark table {
+.light table {
   max-width: 100%;
   width: 100%;
   border-collapse: collapse;
   border-spacing: 0;
 }
-.dark th,
-.dark td {
+.light th,
+.light td {
   padding: 5px 10px;
   vertical-align: top;
 }
-.dark a {
+.light a {
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
 }
-.dark hr {
+.light hr {
   background: #474d54;
 }
-.dark h1 {
+.light h1 {
   margin-top: 2em;
 }
-.dark a {
+.light a {
   color: #e0e0e0;
   text-decoration: underline;
 }
-.dark a:hover {
+.light a:hover {
   color: #fff;
 }
-.dark .md-inline-math script {
+.light .md-inline-math script {
   color: #81b1db;
 }
-.dark b,
-.dark th,
-.dark dt,
-.dark strong {
+.light b,
+.light th,
+.light dt,
+.light strong {
   color: #dedede;
 }
-.dark mark {
+.light mark {
   background: #d3d40e;
 }
-.dark blockquote {
+.light blockquote {
   color: #9da2a6;
 }
-.dark table a {
+.light table a {
   color: #dedede;
 }
-.dark th,
-.dark td {
+.light th,
+.light td {
   border: solid 1px #474d54;
 }
-.dark .task-list {
+.light .task-list {
   padding-left: 0;
 }
-.dark .md-task-list-item {
+.light .md-task-list-item {
   padding-left: 1.25rem;
 }
-.dark .md-task-list-item > input {
+.light .md-task-list-item > input {
   top: auto;
 }
-.dark .md-task-list-item > input:before {
+.light .md-task-list-item > input:before {
   content: '';
   display: inline-block;
   width: 0.875rem;
@@ -349,18 +354,18 @@ html {
   background-color: #363b40;
   margin-top: -0.4rem;
 }
-.dark .md-task-list-item > input:checked:before,
-.dark .md-task-list-item > input[checked]:before {
+.light .md-task-list-item > input:checked:before,
+.light .md-task-list-item > input[checked]:before {
   content: '\221A';
   font-size: 0.625rem;
   line-height: 0.625rem;
   color: #dedede;
 }
-@keyframes bgColorToNight {
+@keyframes bgColorToLight {
   0% {
-    background: #fff;
+    background: #363b40;
   }
   100% {
-    background: #363b40;
+    background: #fff;
   }
 }

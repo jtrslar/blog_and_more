@@ -1,6 +1,6 @@
 <template>
   <div class="main">
-    <div class="title">
+    <div ref="test_hhh" class="title">
       <p class="title_name">BLOG</p>
     </div>
     <div class="blog_list">
@@ -42,11 +42,7 @@ export default {
     },
     // --------------------------- handle ----------------------------
     handleReadBlog(blog) {
-      this.selectedBlog = blog
-      this.$router.push({
-        name: 'BlogDetail',
-        params: { id: blog.id },
-      })
+      this.$router.push(`/blogDetail?id=${blog.id}`)
     },
   },
 }
