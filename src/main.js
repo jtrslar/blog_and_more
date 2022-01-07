@@ -5,8 +5,7 @@ import store from './store'
 
 import '@/assets/css/font.css'
 import '@/assets/css/reset.css'
-import '@/assets/css/blogskin/light/index.css'
-import '@/assets/css/blogskin/night/index.css'
+import '@/assets/css/markdown/index.less'
 
 Vue.config.productionTip = false
 
