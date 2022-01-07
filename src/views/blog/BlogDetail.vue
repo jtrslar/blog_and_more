@@ -1,20 +1,20 @@
 <template>
-  <!-- 可能会改成组件 -->
-  <div ref="blog_box" :class="pattern">
-    <div class="pattern" @click="handleChangePattern(pattern)">模式</div>
+  <div :class="`mark_box ${pattern ? 'dark' : 'light'}`">
+    <div class="pattern" @click="handleChangePattern">模式</div>
     <div ref="blogDetail" class="blog_detail marked"></div>
   </div>
 </template>
 
 <script>
-import { marked } from 'marked'
+import MarkDownIt from 'markdown-it'
+import hljs from 'highlight.js'
 import API from '@/api/index'
 
 export default {
   data() {
     return {
       blogId: null,
-      pattern: 'dark',
+      pattern: true,
     }
   },
   mounted() {
@@ -27,31 +27,37 @@ export default {
       const parmas = { id: blogId }
       const { fileDetail } = (await API.getBlogContent(parmas)) || {}
       const blogDom = this.$refs.blogDetail
-      blogDom.innerHTML = marked(fileDetail)
+      const md = this.getMakrdown()
+      blogDom.innerHTML = md.render(fileDetail)
 
       this.blogId = blogId
     },
+    getMakrdown() {
+      return MarkDownIt({
+        highlight: function (str, lang) {
+          if (lang && hljs.getLanguage(lang)) {
+            return hljs.highlight(lang, str).value
+          }
+
+          return '' // 使用额外的默认转义
+        },
+      })
+    },
     // --------------------------- handle ----------------------------
-    handleChangePattern(pattern) {
-      this.pattern = pattern === 'dark' ? 'light' : 'dark'
+    handleChangePattern() {
+      this.pattern = !this.pattern
     },
   },
 }
 </script>
 
 <style lang="less" scoped>
-.dark,
-.light {
+.mark_box {
   position: relative;
   width: 100%;
-  height: 100%;
-
-  font-family: 'SansHansLight';
-  font-size: 26px;
 
   .pattern {
     display: flex;
-    align-items: center;
     justify-content: center;
     position: absolute;
     z-index: 1;
@@ -68,9 +74,9 @@ export default {
   .blog_detail {
     display: flex;
     flex-flow: column;
-    align-items: center;
+    align-items: flex-start;
 
-    padding: 2% 15%;
+    padding: 2% 20%;
     width: 100%;
     height: 100%;
   }

@@ -1,0 +1,15 @@
+.dark {
+  /* 普通标签 - 颜色配置 */
+  --bg-color: #363b40;
+  --word-color: #dedede;
+  --line-color: #69717a;
+  --code-background-color: #282c34;
+  --blockquote-background-color: #6e6e6e;
+  --mark-background-color: #d3d40e;
+  --a-hover-color: #e0e0e0;
+  --a-word-color: #e0e0e0;
+  --thumb-color: #394045;
+  --thumb-hover-color: #5c6770;
+
+  /* 代码块标签 - 颜色配置 */
+}

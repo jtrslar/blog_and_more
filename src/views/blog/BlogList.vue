@@ -49,8 +49,6 @@ export default {
 </script>
 
 <style lang="less" scoped>
-@diffTime: 0.2s;
-
 .main {
   display: flex;
   flex-flow: column;

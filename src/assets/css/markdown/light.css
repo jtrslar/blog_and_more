@@ -1,0 +1,18 @@
+@import './code.css';
+
+.light {
+  /* 普通标签 - 颜色配置 */
+  --bg-color: #fff;
+  --word-color: #000;
+  --line-color: rgb(216, 216, 216);
+  --code-background-color: #f6f6f6;
+  --blockquote-word-color: #9da2a6;
+  --mark-background-color: #d3d40e;
+  --a-hover-color: #078ee2;
+  --a-word-color: #067dc7;
+  --scrollbar-color: var(--bg-color);
+  --thumb-color: #394045;
+  --thumb-hover-color: #5c6770;
+
+  /* 代码块标签 - 颜色配置 */
+}
