@@ -9,8 +9,8 @@ module.exports = {
   devServer: {
     proxy: {
       '/api': {
-        // target: 'https://jtrslar.com/',
-        target: 'http://localhost:3000/',
+        target: 'https://jtrslar.com/',
+        // target: 'http://localhost:3000/',
         secure: false,
         changeOrigin: true,
         pathRewrite: {
